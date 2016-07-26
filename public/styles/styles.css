@@ -1,0 +1,300 @@
+/*Color palette:
+
+#96350C Smokey Topaz
+#432E36 Old Burgundy
+#666666 Satan Gray
+#FDFFF7 Baby Powder
+#FFE4A3 navajo white --> beige
+#586994 UCLA Blue --> light-ish blue
+#D8D8D8 timberwolf (gray)
+
+#B4ADEA maximum Blue Purple*/
+
+body{
+  font-family:Montserrat;
+  background-color: #331832 ;
+}
+.transition {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.well{
+  border-radius:5px;
+  box-shadow:0px 0px 5px  #777;
+   padding:20px;
+}
+.review-stars{
+  margin: 10px 0;
+  font-size:50px;
+  color:#fa4b2a;
+}
+#center_page_content{ 
+  width: 100%;
+  margin:0 auto; 
+}
+h1 {
+  padding: 0;
+	margin: 0;
+	text-align:center;
+	color: #EBEBEB ;
+	font-size: 48px;
+}
+
+h3{
+  padding: 0;
+  margin: 0;
+  text-align:center;
+  color: #EBEBEB ;
+  font-size: 36px;
+}
+
+#loc-header{
+text-align: center;
+}
+
+.location-name{
+text-align: center;
+font-style: bold;
+font-size: 28px;
+
+}
+
+
+#update-astro-log{
+  margin-left: 10%;
+
+}
+
+#delete-comment {
+  margin-left: 10%;
+}
+
+.panel-body{
+   background-color: #7FB7BE;
+   width:75%;
+   margin: 0 auto;
+
+  
+
+}
+.panel-default{
+ background-color: #331832 ;
+ border-width: 0px ;
+ width:75%;
+ margin: 0 auto;
+
+
+
+}
+
+.panel-footer{
+    width: 75%;
+    padding: 10px 15px;
+    background-color: #7FB7BE;
+    border: 0px solid #fff;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0 auto;
+
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #7FB7BE;
+    border: 1px solid #ddd;
+    margin:0 auto;
+}
+
+
+#copyright{
+  margin-top: -10%;
+}
+#apod_image_container >h5{
+	width: 100%;
+  padding: 0;
+  margin-bottom: -10%;
+  color: white;
+}
+#apod_image_container {
+  padding: 0;
+  margin-top:-20%;
+  z-index:-1;
+}
+
+#apod_img{
+
+  padding: 0;
+}
+
+#apod_title{
+	z-index:1000;
+}
+
+
+/* Utilities for Testing*/
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+/*///////////////////Nav-bar styling/////////////////////////////////////////////*/
+#Tenebris {
+  color: #EBEBEB;
+  font-size: 28px;
+}
+
+#Tenebris:hover {
+  color: #8C271E;
+  
+}
+
+.navbar{
+  background-color: #331832 ;
+  border: 0px;
+
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #EBEBEB;
+  font-size: 16px;
+
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+
+  color: #8C271E;
+ 
+
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+body,html {
+    font-family: 'Open Sans', 'sans-serif';
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+    padding: 20px 0px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 1px;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  color: #222;
+  padding: 3px 5px;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+ 
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 18px;
+  color: #ff3546;
+  padding: 5px 60px 5px 5px;
+  line-height: 30px;
+}
+
+.carousel-control {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+}
+.left.carousel-control {
+  right: 30px;
+  left: inherit;
+}
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right {
+  font-size: 12px;
+  background-color: #fff;
+  line-height: 30px;
+  text-shadow: none;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.nav .open > a, .nav .open > a:focus, .nav  .open  > a:hover {
+ 
+}
+
+
+/*/////////////////Google Maps styling /////////////////////////////*/
+#map_container {
+  margin-bottom: 10%;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+
+}
+#copyright{
+
+  color:#EBEBEB;
+}
+
+#map {
+  
+  width: 100%;
+  height: 100%;
+}
+@media(max-width: 600px){
+
+#map{
+  /*width: 300px;*/
+  height: 400px;
+}
+}
+
+.glyphicon-screenshot {
+font-size: 28px;
+
+
+}
+
+#show-review-textarea {
+  background-color: #8C271E;
+}
+
+#review-cont {
+  margin-top:30px;
+background-color: #EBEBEB; 
+
+}
+
+
+
+
+
+
+
+/*icons i will need*/
+/*glyphicon glyphicon-pencil*/
+/*glyphicon glyphicon-ok
+glyphicon glyphicon-home
+glyphicon glyphicon-list-alt
+glyphicon glyphicon-edit
+glyphicon glyphicon-arrow-left
+glyphicon glyphicon-arrow-right
+glyphicon glyphicon-calendar
+glyphicon glyphicon-log-in
+glyphicon glyphicon-log-out*/

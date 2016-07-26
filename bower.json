@@ -1,0 +1,19 @@
+{
+  "name": "space_be_like_it_do",
+  "description": "",
+  "main": "server.js",
+  "license": "ISC",
+  "homepage": "https://github.com/Ryan-Brenner/SGProject01",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jQuery": "^3.1.0",
+    "handlebars": "^4.0.5"
+  }
+}

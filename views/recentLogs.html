@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Space Be What It Do</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="vendor/jQuery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/handlebars/handlebars.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/recentLogs.js"></script>
+  </head>
+  <body>
+
+<!-- NAV BAR -->
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id='Tenebris' href="/">Tenebris</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li class="dropdown mega-dropdown">
+          <a href='/tagnewloc'  role="button" aria-haspopup="true" id='tag_loc' aria-expanded="false">Tag a Location</a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+          
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+                   
+                </ul>       
+        </li>
+         <li class="dropdown mega-dropdown">
+          <a href="#"  role="button" aria-haspopup="true" aria-expanded="false">Night Sky</a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+          <ul class="dropdown-menu">
+           
+          </ul>
+        </li>
+
+                </ul>       
+        </li>
+         <li class="dropdown mega-dropdown">
+          <a href="#" id='recent_logs' role="button" aria-haspopup="true" aria-expanded="false">Recent Logs </a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+                    
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+                
+                </ul>       
+        </li>
+         <li class="dropdown mega-dropdown">
+          <a href="#" id='stargazing_locs' role="button" aria-haspopup="true" aria-expanded="false">Stargazing Locations</a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+                    <li class="dropdown1 col-sm-3">
+          <ul class="dropdown-menu">
+           
+          </ul>
+        </li>
+                    
+
+                    
+                </ul>       
+        </li>
+         <li class="dropdown mega-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Space Events</a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+                    <li class="dropdown1 col-sm-3">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Upcoming Events</a>
+          <ul class="dropdown-menu">
+           
+          </ul>
+        </li>
+                    <li class="col-sm-3">Event 1
+                        
+                    </li>
+                    <li class="col-sm-3">Event 2
+                        
+                    </li>
+                    <li class="col-sm-3">Event 3
+                        
+                    </li>
+                </ul>       
+        </li>
+        <li class="dropdown mega-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Space Station </a>
+          <ul class="dropdown-menu mega-dropdown-menu">
+                    <li class="dropdown1 col-sm-3">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Next Passes</a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+                    <li class="col-sm-3">Pass 1
+                        
+                    </li>
+                    <li class="col-sm-3">Pass 2
+                        
+                    </li>
+                    <li class="col-sm-3">Pass 3 
+                        
+                    </li>
+                </ul>       
+        </li>
+
+      </ul>
+     
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+ <!-- HEADLINE CONTENT -->
+
+  <div id= astroLogs>
+
+     <script id="astroLog-template" type="text/x-handlebars-template">
+          <!-- one album -->
+          
+
+              <div class="row astroLog" data-astroLog-id="{{_id}}">
+
+
+                <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+
+
+                    <!-- begin album internal row -->
+
+                        <div class="col-xs-12">
+                          <ul class="list-group">
+                            <li class="list-group-item location-name">
+                              <!-- <h4 id='loc-header' class='inline-header'>Location:</h4> -->
+                              <span class='location-name'>{{name_of_loc}}</span>
+                            </li>
+
+
+
+                            <!-- <li class="list-group-item">
+                              <h4 class="inline-header">Logs:</h4>
+                              <span>&ndash;{{name_of_loc}}&ndash;</span> -->
+                               <li class="list-group-item">
+                              <h4 class="inline-header">Object of Interest:</h4>
+                              <span>&ndash;{{obj_observed}} &ndash;</span>
+                            </li>
+                             <li class="list-group-item">
+                              <h4 class="inline-header">User Rating:</h4>
+                              <span>&ndash;{{rating}}&ndash;</span>
+                            </li>
+                             <li class="list-group-item">
+                              <h4 class="inline-header">comments:</h4>
+                              <span>&ndash; {{comments}} &ndash;</span>
+                              <div class='panel-footer' id='delete-panel'>
+                                <button class='btn btn-primary' id='update-astro-log'>Add Comment</button>
+                                <button  id= 'delete-log' class='btn btn-primary delete-astro-log-comment'>Delete Log</button>
+                              </div>
+                            </li>
+
+
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+                      <!-- end of album internal row -->
+
+                      <div class='panel-footer'>
+                       
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <!-- end one album -->
+          </script>
+  </div>
+
+  </body>
+</html>

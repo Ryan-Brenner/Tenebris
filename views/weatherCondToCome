@@ -14,6 +14,26 @@ LONGITUDE = -122.44
 res.json(DATA).currently
 
 
+currently: 
+apparentTemperature (F)
+visibility: 9.41 (km?)
+cloudCover: 0.2
+
+
+daily:
+sunriseTime: 1469538595
+sunsetTime: 1469589897,
+humidity: 0.72,
+temperatureMin: 54.13,
+moonPhase: 0.74, 	
+	{waxing crescent, waxing gibbous, waning gibbous, and waning crescent moons}
+
+
+
+
+
+
+
 
 currently: {
 time: 1469579866,

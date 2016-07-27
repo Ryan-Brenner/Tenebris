@@ -3,7 +3,8 @@ var db = require('../models');
 // GET /markers
 function index(req, res) {
   db.AstroLog.find({},'longitude latitude', function(err,allAstroLogs){
-   res.send(allAstroLogs);
+  	var lat_lng= allAstroLogs
+   res.send(lat_lng);
    
   });
 };

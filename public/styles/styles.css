@@ -78,14 +78,19 @@ iframe {
 
 .iss-pass{
   margin-left:1%;
-  margin-right:1%;
+  margin-right:-10%;
   text-align: center;
+
+}
+
+.iss-pass>span{
+padding: 3%;
 border-width: 1px;
 border-style: solid;
 border-color: #666;
 border-radius: 35%;
-}
 
+}
 
 #update-astro-log{
   margin-left: 10%;

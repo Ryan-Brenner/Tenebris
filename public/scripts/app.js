@@ -2,6 +2,48 @@ console.log("Sanity Check: JS is working!");
 
 $(document).ready(function() {
 
+
+
+var mun_endpoint = "http://api.burningsoul.in/moon/"
+
+
+$.getJSON(mun_endpoint, function(data) {
+
+
+var mun_stage = data['stage'];
+var NFM = data['FM']['DT'];
+var NNM = data['NNM']['DT'];
+var distance = Math.floor(data['DFCOE']*0.621371)+"  miles";
+
+$('#mun_stage').text("Moonphase: " + mun_stage);
+$('#mun_FM').text("Next Full Moon: " + NFM);
+$('#mun_NM').text("Next New Moon: " + NNM);
+$('#dfe').text("Current Distance From Earth: " + distance);
+
+})
+
+  var ISS_endpoint = "http://api.open-notify.org/iss-pass.json?lat=37.78&lon=-122.44&alt=20&n=5&callback=?";
+  var ISS_pass=[]
+  var ISS_dur=[]
+
+
+  $.getJSON( ISS_endpoint).success( function(data) {
+      data['response'].forEach(function (d) {
+          var date = new Date(d['risetime']*1000);
+
+           // $('#isspass').append
+           ISS_pass.push((date.toString().substring(0,21)));
+           ISS_dur.push(Math.floor(d['duration']/60));
+           for (var i=0; i<3; i++) {
+           $('#pass'+(i+1)+'').text(ISS_pass[i]+ " "+"for "+" " + ISS_dur[i] + " seconds")
+          
+         }
+      });
+  });
+
+
+
+
 var apod_endpoint = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
 
   $.get(apod_endpoint).success(function handleApodSuccess(apod){
@@ -28,6 +70,7 @@ var apod_endpoint = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH1
 
 
   });
+
 
 
 

@@ -32,6 +32,30 @@ app.get('/tagnewloc', function createNewLoc (req,res) {
 
 });
 
+
+app.get('/issLive', function getStrem (req,res){ 
+
+	res.sendFile(__dirname + '/views/issLive.html');
+
+})
+
+
+
+
+app.get('/geopos', function getPos (req,res) {
+	res.send(console.log(res))
+});
+
+
+
+
+
+
+
+
+
+
+
 /**********
  * Endpoints *
  **********/
@@ -40,9 +64,10 @@ app.get('/tagnewloc', function createNewLoc (req,res) {
 app.get('/api', controllers.api.index);
 app.get('/astrologs', controllers.astroLogs.index);
 app.post('/astrologs', controllers.astroLogs.create);
+app.get('/geopos', controllers.geopos.index);
 app.delete('/astrologs/:id', controllers.astroLogs.destroy);
 
-app.get('/destroylogs', controllers.markers.index);
+
 
 
 

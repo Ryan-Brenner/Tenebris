@@ -1,0 +1,96 @@
+
+
+
+
+
+https://api.forecast.io/forecast/APIKEY/LATITUDE,LONGITUDE,TIME
+
+APIKEY= ea92f972f7ebe84012a3d3360c32f2d7
+
+LATITUDE = 37.78
+
+LONGITUDE = -122.44
+
+res.json(DATA).currently
+
+
+
+currently: {
+time: 1469579866,
+summary: "Clear",
+icon: "clear-day",
+nearestStormDistance: 34,
+nearestStormBearing: 88,
+precipIntensity: 0,
+precipProbability: 0,
+temperature: 70.63,
+apparentTemperature: 70.63,
+dewPoint: 52.4,
+humidity: 0.53,
+windSpeed: 8.12,
+windBearing: 277,
+visibility: 9.41,
+cloudCover: 0.2,
+pressure: 1010.95,
+ozone: 279.99
+
+daily: {
+summary: "No precipitation throughout the week, with temperatures peaking at 73°F on Friday.",
+icon: "clear-day",
+data: [
+{
+time: 1469516400,
+summary: "Partly cloudy until afternoon.",
+icon: "partly-cloudy-day",
+sunriseTime: 1469538595,
+sunsetTime: 1469589897,
+moonPhase: 0.74,
+precipIntensity: 0,
+precipIntensityMax: 0,
+precipProbability: 0,
+temperatureMin: 54.13,
+temperatureMinTime: 1469530800,
+temperatureMax: 71.26,
+temperatureMaxTime: 1469581200,
+apparentTemperatureMin: 54.13,
+apparentTemperatureMinTime: 1469530800,
+apparentTemperatureMax: 71.26,
+apparentTemperatureMaxTime: 1469581200,
+dewPoint: 52.26,
+humidity: 0.72,
+windSpeed: 4.9,
+windBearing: 265,
+visibility: 9.6,
+cloudCover: 0.26,
+pressure: 1012.03,
+ozone: 282.41
+},
+
+
+
+
+
+sunriseTime and sunsetTime (only defined on daily data points)
+
+summary: A human-readable text summary of this data point. (Do not use this value for automated purposes: you should use the icon property, instead.)
+icon: A machine-readable text summary of this data point, suitable for selecting an icon for display. If defined, this property will have one of the following values: clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night. (Developers should ensure that a sensible default is defined, as additional values, such as hail, thunderstorm, or tornado, may be defined in the future.)
+sunriseTime and sunsetTime (only defined on daily data points): The UNIX time (that is, seconds since midnight GMT on 1 Jan 1970) of the last sunrise before and first sunset after the solar noon closest to local noon on the given day. (Note: near the poles, these may occur on a different day entirely!)
+moonPhase (only defined on daily data points): A number representing the fractional part of the lunation number of the given day: a value of 0 corresponds to a new moon, 0.25 to a first quarter moon, 0.5 to a full moon, and 0.75 to a last quarter moon. (The ranges in between these represent waxing crescent, waxing gibbous, waning gibbous, and waning crescent moons, respectively.)
+
+precipProbability: A numerical value between 0 and 1 (inclusive) representing the probability of precipitation occurring at the given time.
+
+temperatureMin, temperatureMinTime, temperatureMax, and temperatureMaxTime (only defined on daily data points): numerical values representing the minimum and maximumum temperatures (and the UNIX times at which they occur) on the given day in degrees Fahrenheit.
+
+
+temperature (not defined on daily data points): A numerical value representing the temperature at the given time in degrees Fahrenheit.
+
+
+
+cloudCover: A numerical value between 0 and 1 (inclusive) representing the percentage of sky occluded by clouds.
+
+
+humidity: A numerical value between 0 and 1 (inclusive) representing the relative humidity.
+
+visibility: A numerical value representing the average visibility in miles, capped at 10 miles.
+
+
